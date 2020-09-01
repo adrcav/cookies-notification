@@ -1,0 +1,36 @@
+{
+  "name": "cookies-notification",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/js/index.js",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/runtime": "^7.7.7",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.26.7",
+    "browserify": "^16.5.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-buffer": "0.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-tap": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-wait": "^0.0.2",
+    "jest": "^26.4.2",
+    "js-cookie": "^2.2.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "gulp",
+    "start:server": "gulp server",
+    "build": "gulp build"
+  },
+  "author": "Adriel Cavalcanti (https://github.com/adrcav)",
+  "license": "ISC"
+}
