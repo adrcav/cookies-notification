@@ -1,13 +1,22 @@
 {
   "name": "cookies-notification",
   "version": "1.0.0",
-  "description": "",
+  "description": "🍪 A simple and small cookies consent notification",
   "main": "src/js/index.js",
+  "homepage": "https://github.com/adrcav/cookies-notification#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrcav/cookies-notification"
+  },
+  "bugs": {
+    "url": "https://github.com/adrcav/cookies-notification/issues"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.7.7",
     "@babel/runtime": "^7.7.7",
+    "babel-jest": "^26.3.0",
     "babelify": "^10.0.0",
     "browser-sync": "^2.26.7",
     "browserify": "^16.5.0",
@@ -32,5 +41,5 @@
     "build": "gulp build"
   },
   "author": "Adriel Cavalcanti (https://github.com/adrcav)",
-  "license": "ISC"
+  "license": "MIT"
 }
