@@ -1,9 +1,10 @@
 # 🍪 CookiesNotification
 ![jsdelivr hits](https://data.jsdelivr.com/v1/package/gh/adrcav/cookies-notification/badge)
+[![Build Status](https://travis-ci.org/adrcav/cookies-notification.svg?branch=master)](https://travis-ci.org/adrcav/cookies-notification)
 ![Dependencies](https://david-dm.org/adrcav/cookies-notification.svg)
 ![License: MIT](https://img.shields.io/github/license/adrcav/cookies-notification)
 
-<blockquote>A simple and small cookies consent notification.</blockquote>
+<blockquote>A simple and lightweight cookies consent notification.</blockquote>
 
 ## Preview
 ![Preview](https://i.imgur.com/WmPSTpk.gif)
