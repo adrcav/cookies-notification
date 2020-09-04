@@ -1,6 +1,10 @@
 # 🍪 CookiesNotification
+![jsdelivr hits](https://data.jsdelivr.com/v1/package/gh/adrcav/cookies-notification/badge)
+[![Build Status](https://travis-ci.org/adrcav/cookies-notification.svg?branch=master)](https://travis-ci.org/adrcav/cookies-notification)
+![Dependencies](https://david-dm.org/adrcav/cookies-notification.svg)
+![License: MIT](https://img.shields.io/github/license/adrcav/cookies-notification)
 
-<blockquote>A simple and small cookies consent notification.</blockquote>
+<blockquote>A simple and lightweight cookies consent notification.</blockquote>
 
 ## Preview
 ![Preview](https://i.imgur.com/WmPSTpk.gif)
@@ -21,10 +25,16 @@ If you have imported CookiesNotification via one of the above methods, you are r
 
 ## Usage
 
-Here's an example of a basic implementation with default options:
+Here's an example of a basic implementation:
 
 ```javascript
-const cookies = new CookiesNotification({
+const cookies = new CookiesNotification();
+```
+
+You can also customize the notification, here's a default options:
+
+```javascript
+const options = {
   container: document.body,
   message: 'We use cookies and others technologies to make interactions with our services easy and meaningful. By continuing to use this site you are giving us your consent to do this.',
   confirmButton: 'Got it',
@@ -33,7 +43,9 @@ const cookies = new CookiesNotification({
   position: 'left',
   borderColor: '#333333',
   remember: 365
-});
+};
+
+const cookies = new CookiesNotification(options);
 ```
 
 ## License
