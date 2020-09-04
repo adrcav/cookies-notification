@@ -1,6 +1,6 @@
 {
   "name": "cookies-notification",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "🍪 A simple and small cookies consent notification",
   "main": "src/js/index.js",
   "homepage": "https://github.com/adrcav/cookies-notification#readme",
