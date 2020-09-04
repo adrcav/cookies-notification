@@ -30,6 +30,9 @@ class CookiesNotification {
      * @property {string} position Set the default position to render on DOM element
      * @property {string} borderColor Custom DOM element border color
      * @property {number} remember Total days to remind the user renew consent
+     * @property {function} onRender Callback function is executed after every CookiesNotification render
+     * @property {function} onConfirm Callback function is executed after click event on confirm (accept) button
+     * @property {function} onCancel Callback function is executed after click event on cancel (decline) button
      */
     this.defaults = {
       container: document.body,
@@ -39,7 +42,10 @@ class CookiesNotification {
       cancelButton: 'Decline',
       position: 'left',
       borderColor: '#333333',
-      remember: 365
+      remember: 365,
+      onRender: null,
+      onConfirm: null,
+      onCancel: null
     };
 
     /**
@@ -110,6 +116,8 @@ class CookiesNotification {
 
     this.setAcceptCookies();
     this.hideElement();
+
+    this.onConfirm();
   }
 
   /**
@@ -121,6 +129,35 @@ class CookiesNotification {
 
     this.removeAllCookies();
     this.hideElement();
+
+    this.onCancel();
+  }
+
+  /**
+   * Executes after every CookiesNotification render
+   * @return null
+   */
+  onRender() {
+    if (typeof this.settings.onRender === 'function')
+      this.settings.onRender(this.elementDOM);
+  }
+
+  /**
+   * Executes after click event on confirm (accept) button
+   * @return null
+   */
+  onConfirm() {
+    if (typeof this.settings.onConfirm === 'function')
+      this.settings.onConfirm(this.elementDOM);
+  }
+
+  /**
+   * Executes after click event on cancel (decline) button
+   * @return null
+   */
+  onCancel() {
+    if (typeof this.settings.onCancel === 'function')
+      this.settings.onCancel(this.elementDOM);
   }
 
   /**
@@ -192,7 +229,10 @@ class CookiesNotification {
     containerEl.appendChild(this.elementDOM);
 
     // Show element with a small delay
-    setTimeout(() => this.showElement(), 750);
+    setTimeout(() => {
+      this.showElement();
+      this.onRender();
+    }, 750);
   }
 }
 
